@@ -29,7 +29,7 @@ def CekBhs(a, b, str): # Untuk cek production rules
     for j in cnf[i]:
       if a == j and i not in b: # Untuk cek hasil dari concatenate dan union
         b.append(i)
-      elif a == 0 and j == str[b]:  # Untuk cek simbol dari baris 1
+      elif a == 0 and j == str[b] and i not in temp:  # Untuk cek simbol dari baris 1
         temp.append(i)
 
 def Baris2dst(i, j, k, str):  # Untuk mengisi kolom pada baris 2 dan seterusnya
